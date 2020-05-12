@@ -1,0 +1,119 @@
+:root {
+  --color-main: #ff4500;
+  --color-secondary: #00ff45;
+  --color-white: #fff;
+  --color-black: #000; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+.motto {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(../img/photo-of-person-running-on-dirt-road-1526790.jpg);
+  background-size: cover;
+  background-position: center; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh; }
+
+.nav__list {
+  list-style: none;
+  display: none; }
+
+.nav__link:link, .nav__link:visited {
+  color: var(--color-white);
+  text-decoration: none; }
+
+.nav__item {
+  padding: 1rem; }
+
+.nav__item:hover > .nav__link {
+  color: var(--color-main); }
+
+.nav__menu-toggle {
+  display: none; }
+
+.nav__menu-button {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  background-color: var(--color-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 100%;
+  z-index: 1000; }
+
+.nav__menu-icon, .nav__menu-icon::before, .nav__menu-icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: var(--color-white);
+  display: block;
+  position: absolute; }
+
+.nav__menu-icon::before, .nav__menu-icon::after {
+  content: "";
+  position: absolute;
+  transition: all 0.1s; }
+
+.nav__menu-icon::before {
+  top: -1rem; }
+
+.nav__menu-icon::after {
+  top: 1rem; }
+
+.nav__menu-toggle:checked + .nav__menu-button > .nav__menu-icon {
+  background-color: transparent; }
+
+.nav__menu-toggle:checked + .nav__menu-button > .nav__menu-icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.nav__menu-toggle:checked + .nav__menu-button > .nav__menu-icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+.nav__menu-toggle:checked ~ .nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-black);
+  font-size: 3rem; }
+
+.logo__container {
+  display: flex;
+  width: 25vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.logo__icon {
+  height: 4rem;
+  width: 4rem;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  fill: var(--color-white); }
+
+.logo__name {
+  display: inline-block;
+  color: var(--color-white); }
