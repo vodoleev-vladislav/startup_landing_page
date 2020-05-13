@@ -1,0 +1,27 @@
+body {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400;
+}
+
+.heading-large {
+  font-size: var(--font-size-large);
+  font-weight: 700;
+}
+
+.heading-medium {
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+}
+
+.heading-small {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-colored {
+  color: var(--color-primary);
+}

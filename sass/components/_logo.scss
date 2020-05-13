@@ -1,11 +1,10 @@
 .logo {
-  &__container {
-    display: flex;
-    width: 25vw;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  width: 15rem;
+  height: 100%;
+  margin-left: 1rem;
+  align-items: center;
+  justify-content: center;
 
   &__icon {
     height: 4rem;

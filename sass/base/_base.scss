@@ -1,0 +1,30 @@
+:root {
+  --color-primary: #ff4500;
+  --color-secondary: #00ff45;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey-dark: #808080;
+  --color-grey-light: #d3d3d3;
+
+  --font-size-large: 4rem;
+  --font-size-medium: 3rem;
+  --font-size-small: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

@@ -1,0 +1,13 @@
+.welcome {
+  padding: 3rem;
+  text-align: center;
+  &__heading {
+    font-weight: 500;
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: var(--font-size-small);
+  }
+}

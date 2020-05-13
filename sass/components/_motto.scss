@@ -1,0 +1,20 @@
+.motto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25rem;
+  width: 50vw;
+  justify-content: space-evenly;
+  color: var(--color-white);
+
+  &__addressee {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 500;
+  }
+}

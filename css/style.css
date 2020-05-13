@@ -1,8 +1,13 @@
 :root {
-  --color-main: #ff4500;
+  --color-primary: #ff4500;
   --color-secondary: #00ff45;
   --color-white: #fff;
-  --color-black: #000; }
+  --color-black: #000;
+  --color-grey-dark: #808080;
+  --color-grey-light: #d3d3d3;
+  --font-size-large: 4rem;
+  --font-size-medium: 3rem;
+  --font-size-small: 2rem; }
 
 *,
 *::before,
@@ -15,11 +20,31 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-.motto {
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(../img/photo-of-person-running-on-dirt-road-1526790.jpg);
-  background-size: cover;
-  background-position: center; }
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white); }
+
+body {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400; }
+
+.heading-large {
+  font-size: var(--font-size-large);
+  font-weight: 700; }
+
+.heading-medium {
+  font-size: var(--font-size-medium);
+  font-weight: 600; }
+
+.heading-small {
+  font-size: var(--font-size-small);
+  font-weight: 500; }
+
+.text-bold {
+  font-weight: 700; }
+
+.text-colored {
+  color: var(--color-primary); }
 
 .header {
   position: fixed;
@@ -27,6 +52,35 @@ html {
   left: 0;
   width: 100vw;
   height: 10vh; }
+
+.motto-container {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 35%), url(../img/photo-of-person-running-on-dirt-road-1526790.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.welcome {
+  padding: 2rem; }
+
+.services {
+  background-color: var(--color-grey-light); }
+  .services__heading {
+    text-align: center;
+    margin-bottom: 2rem; }
+
+.about-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+
+.team-members {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
 
 .nav__list {
   list-style: none;
@@ -49,7 +103,7 @@ html {
   position: fixed;
   right: 3rem;
   bottom: 3rem;
-  background-color: var(--color-main);
+  background-color: var(--color-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,20 +154,102 @@ html {
   background-color: var(--color-black);
   font-size: 3rem; }
 
-.logo__container {
+.logo {
   display: flex;
-  width: 25vw;
+  width: 15rem;
   height: 100%;
+  margin-left: 1rem;
   align-items: center;
   justify-content: center; }
+  .logo__icon {
+    height: 4rem;
+    width: 4rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    fill: var(--color-white); }
+  .logo__name {
+    display: inline-block;
+    color: var(--color-white); }
 
-.logo__icon {
-  height: 4rem;
-  width: 4rem;
-  flex-shrink: 0;
-  margin-right: 1rem;
-  fill: var(--color-white); }
-
-.logo__name {
-  display: inline-block;
+.motto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25rem;
+  width: 50vw;
+  justify-content: space-evenly;
   color: var(--color-white); }
+  .motto__addressee {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .motto__text {
+    text-align: center;
+    font-weight: 500; }
+
+.btn {
+  font-family: inherit;
+  text-transform: uppercase;
+  width: 13rem;
+  height: 4rem;
+  border: 0; }
+  .btn--transparent {
+    color: var(--color-white);
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-white);
+    font-weight: 600; }
+    .btn--transparent:hover {
+      color: var(--color-black);
+      background-color: var(--color-white); }
+
+.welcome {
+  padding: 3rem;
+  text-align: center; }
+  .welcome__heading {
+    font-weight: 500;
+    margin: 0 2rem;
+    margin-bottom: 1rem; }
+  .welcome__text {
+    font-size: var(--font-size-small); }
+
+.service {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  grid-template-rows: auto;
+  align-items: center; }
+  .service__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-primary); }
+    .service__icon-box {
+      justify-self: center;
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+      height: 6rem;
+      width: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--color-grey-dark);
+      border-radius: 100%; }
+  .service__heading {
+    grid-column: 2 / -1;
+    grid-row: 1 / span 1; }
+  .service__description {
+    grid-column: 2 / -1;
+    grid-row: 2 / span 1;
+    font-size: var(--font-size-small);
+    color: var(--color-grey-dark);
+    margin-right: 1rem; }
+
+.about-card {
+  height: auto;
+  flex-basis: 100%;
+  padding: 1rem; }
+
+.team-member {
+  height: auto;
+  width: 80%;
+  flex-basis: 50%;
+  padding: 1rem; }
