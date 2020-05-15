@@ -1,6 +1,8 @@
 :root {
   --color-primary: #ff4500;
   --color-secondary: #00ff45;
+  --color-tertiary: #00baff;
+  --color-quaternary: #ff00ba;
   --color-white: #fff;
   --color-black: #000;
   --color-grey-dark: #808080;
@@ -297,32 +299,60 @@ body {
     margin-bottom: 1rem; }
   .about-card__list {
     list-style: none;
-    z-index: 1; }
+    font-size: var(--font-size-small);
+    margin-left: 2rem; }
     .about-card__list-item {
-      position: relative;
-      margin-left: 3rem;
-      margin-bottom: 1rem; }
+      display: block;
+      margin-bottom: 0.5rem; }
       .about-card__list-item::before {
-        display: inline-block;
-        position: absolute;
-        content: "";
-        top: 10%;
-        left: -3rem;
-        background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23FF4500" d="M10 0.4c-5.303 0-9.601 4.298-9.601 9.6 0 5.303 4.298 9.601 9.601 9.601 5.301 0 9.6-4.298 9.6-9.601s-4.299-9.6-9.6-9.6zM9.999 17.6c-4.197 0-7.6-3.402-7.6-7.6s3.402-7.6 7.6-7.6 7.601 3.403 7.601 7.6-3.404 7.6-7.601 7.6zM10 8h-4v4h4v2.5l4.5-4.5-4.5-4.5v2.5z"></path></svg>');
-        background-size: 3rem 3rem;
-        background-repeat: no-repeat;
-        height: 3rem;
-        width: 3rem; }
-  .about-card__label {
-    display: block;
-    cursor: pointer;
-    position: relative; }
-  .about-card__content {
+        content: "\27A1";
+        color: var(--color-primary);
+        font-size: var(--font-size-small);
+        margin-left: -2rem;
+        margin-right: 1rem; }
+
+.accordion__item {
+  width: 100%;
+  color: var(--color-black);
+  overflow: hidden; }
+  .accordion__item-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--color-white);
+    cursor: pointer; }
+    .accordion__item-label:hover {
+      color: var(--color-quaternary); }
+    .accordion__item-label::after {
+      content: "\229E"; }
+  .accordion__item-content {
     max-height: 0;
-    transition: 0.3s all;
-    overflow: hidden; }
-  .about-card__toogle:checked ~ .about-card__content {
-    max-height: 50rem; }
+    padding: 0 1rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    transition: all 0.35s; }
+  .accordion__item-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    font-size: var(--font-size-small);
+    background: va(--color-white);
+    cursor: pointer; }
+    .accordion__item-close:hover {
+      color: var(--color-quaternary); }
+  .accordion__item-radio {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+
+.accordion__item-radio:checked + .accordion__item-label {
+  background: var(--color-grey-light); }
+  .accordion__item-radio:checked + .accordion__item-label::after {
+    content: "\229F"; }
+
+.accordion__item-radio:checked ~ .accordion__item-content {
+  max-height: 100vh;
+  padding: 1em; }
 
 .team-member {
   flex-basis: 50%;
@@ -333,3 +363,46 @@ body {
   .team-member__photo {
     width: 100%;
     height: auto; }
+
+.accordion__item {
+  width: 100%;
+  color: var(--color-black);
+  overflow: hidden; }
+  .accordion__item-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--color-white);
+    cursor: pointer; }
+    .accordion__item-label:hover {
+      color: var(--color-quaternary); }
+    .accordion__item-label::after {
+      content: "\229E"; }
+  .accordion__item-content {
+    max-height: 0;
+    padding: 0 1rem;
+    color: var(--color-black);
+    background: var(--color-white);
+    transition: all 0.35s; }
+  .accordion__item-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    font-size: var(--font-size-small);
+    background: va(--color-white);
+    cursor: pointer; }
+    .accordion__item-close:hover {
+      color: var(--color-quaternary); }
+  .accordion__item-radio {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+
+.accordion__item-radio:checked + .accordion__item-label {
+  background: var(--color-grey-light); }
+  .accordion__item-radio:checked + .accordion__item-label::after {
+    content: "\229F"; }
+
+.accordion__item-radio:checked ~ .accordion__item-content {
+  max-height: 100vh;
+  padding: 1em; }
