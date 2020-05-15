@@ -84,3 +84,14 @@
     justify-content: flex-start;
   }
 }
+
+.contact {
+  &__heading {
+    margin: 0 5vw;
+    font-size: var(--font-size-medium);
+    text-align: center;
+  }
+  background-color: var(--color-black);
+  color: var(--color-white);
+  height: 80rem;
+}

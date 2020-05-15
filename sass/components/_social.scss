@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    display: inline-block;
+    margin: 1rem;
+  }
+
+  &__link {
+    display: flex;
+    height: 8rem;
+    width: 8rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+  }
+
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--color-white);
+  }
+
+  &__link:hover > &__icon--facebook {
+    fill: var(--color-facebook);
+  }
+
+  &__link:hover > &__icon--twitter {
+    fill: var(--color-twitter);
+  }
+
+  &__link:hover > &__icon--skype {
+    fill: var(--color-skype);
+  }
+
+  &__link:hover > &__icon--linkedin {
+    fill: var(--color-linkedin);
+  }
+}

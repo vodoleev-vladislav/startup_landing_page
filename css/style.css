@@ -9,6 +9,8 @@
   --color-grey-light: #d3d3d3;
   --color-twitter: #1da1f2;
   --color-facebook: #4267b2;
+  --color-skype: #00aff0;
+  --color-linkedin: #2867b2;
   --font-size-large: 5rem;
   --font-size-medium-large: 4rem;
   --font-size-medium: 3rem;
@@ -113,6 +115,15 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start; }
+
+.contact {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  height: 80rem; }
+  .contact__heading {
+    margin: 0 5vw;
+    font-size: var(--font-size-medium);
+    text-align: center; }
 
 .nav__list {
   list-style: none;
@@ -242,21 +253,26 @@ body {
   text-transform: uppercase;
   width: 15rem;
   height: 5rem;
-  border: 0; }
+  border: 0;
+  color: var(--color-white);
+  font-size: var(--font-size-small);
+  transition: all 0.2s; }
   .btn--transparent {
-    color: var(--color-white);
     background-color: transparent;
     border-radius: 1rem;
     border: 1px solid var(--color-white);
     font-size: var(--font-size-medium-small);
     font-weight: 600;
     width: 20rem;
-    height: 6rem;
-    transition: all 0.1s; }
+    height: 6rem; }
     .btn--transparent:hover {
       color: var(--color-black);
       background-color: var(--color-white);
       transform: translateY(-2px); }
+  .btn--main {
+    background-color: var(--color-primary); }
+    .btn--main:hover {
+      background-color: var(--color-secondary); }
 
 .welcome {
   padding: 2rem;
@@ -409,3 +425,39 @@ body {
 .accordion__item-radio:checked ~ .accordion__item-content {
   max-height: 100vh;
   padding: 1em; }
+
+.form {
+  margin: 0 5vw;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  .form__textarea {
+    font-family: inherit; }
+
+.social {
+  display: flex;
+  flex-direction: row; }
+  .social__item {
+    display: inline-block;
+    margin: 1rem; }
+  .social__link {
+    display: flex;
+    height: 8rem;
+    width: 8rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-white);
+    border-radius: 50%; }
+  .social__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--color-white); }
+  .social__link:hover > .social__icon--facebook {
+    fill: var(--color-facebook); }
+  .social__link:hover > .social__icon--twitter {
+    fill: var(--color-twitter); }
+  .social__link:hover > .social__icon--skype {
+    fill: var(--color-skype); }
+  .social__link:hover > .social__icon--linkedin {
+    fill: var(--color-linkedin); }
