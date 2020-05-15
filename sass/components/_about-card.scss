@@ -1,5 +1,59 @@
 .about-card {
-  height: auto;
   flex-basis: 100%;
-  padding: 1rem;
+  margin: 1rem;
+  font-size: var(--font-size-small);
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__paragraph,
+  &__heading-secondary {
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+    z-index: 1;
+
+    &-item {
+      position: relative;
+      margin-left: 3rem;
+      margin-bottom: 1rem;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        top: 10%;
+        left: -3rem;
+        background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23FF4500" d="M10 0.4c-5.303 0-9.601 4.298-9.601 9.6 0 5.303 4.298 9.601 9.601 9.601 5.301 0 9.6-4.298 9.6-9.601s-4.299-9.6-9.6-9.6zM9.999 17.6c-4.197 0-7.6-3.402-7.6-7.6s3.402-7.6 7.6-7.6 7.601 3.403 7.601 7.6-3.404 7.6-7.601 7.6zM10 8h-4v4h4v2.5l4.5-4.5-4.5-4.5v2.5z"></path></svg>');
+        background-size: 3rem 3rem;
+        background-repeat: no-repeat;
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+
+  &__toggle {
+    // position: absolute;
+    // opacity: 0;
+  }
+
+  &__label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__content {
+    max-height: 0;
+    transition: 0.3s all;
+    overflow: hidden;
+  }
+
+  &__toogle:checked ~ &__content {
+    max-height: 50rem;
+  }
 }

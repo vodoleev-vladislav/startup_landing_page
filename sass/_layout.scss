@@ -1,9 +1,16 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 10vh;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (min-width: $bp-medium) {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 }
 
 .motto-container {
@@ -20,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .welcome {
@@ -37,6 +44,19 @@
 }
 
 .about {
+  &__heading {
+    text-align: center;
+    margin: 0 5vw;
+
+    &-main {
+      font-size: var(--font-size-medium-large);
+    }
+
+    &-sub {
+      font-size: var(--font-size-medium-small);
+    }
+  }
+
   &-cards {
     display: flex;
     flex-flow: row wrap;

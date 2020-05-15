@@ -5,9 +5,12 @@
   --color-black: #000;
   --color-grey-dark: #808080;
   --color-grey-light: #d3d3d3;
-  --font-size-large: 4rem;
+  --font-size-large: 5rem;
+  --font-size-medium-large: 4rem;
   --font-size-medium: 3rem;
-  --font-size-small: 2rem; }
+  --font-size-medium-small: 2.5rem;
+  --font-size-small: 2rem;
+  --font-size-smallest: 1.5rem; }
 
 *,
 *::before,
@@ -18,7 +21,10 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 50%; }
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 62.5%; } }
 
 ::selection {
   background-color: var(--color-primary);
@@ -47,11 +53,17 @@ body {
   color: var(--color-primary); }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 10vh; }
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center; }
+  @media only screen and (min-width: 50em) {
+    .header {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.9); } }
 
 .motto-container {
   height: 100vh;
@@ -61,7 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-evenly; }
 
 .welcome {
   padding: 2rem; }
@@ -71,6 +83,14 @@ body {
   .services__heading {
     text-align: center;
     margin-bottom: 2rem; }
+
+.about__heading {
+  text-align: center;
+  margin: 0 5vw; }
+  .about__heading-main {
+    font-size: var(--font-size-medium-large); }
+  .about__heading-sub {
+    font-size: var(--font-size-medium-small); }
 
 .about-cards {
   display: flex;
@@ -84,17 +104,41 @@ body {
 
 .nav__list {
   list-style: none;
-  display: none; }
+  display: none;
+  font-size: var(--font-size-medium); }
+  @media only screen and (min-width: 50em) {
+    .nav__list {
+      display: flex;
+      flex-direction: row;
+      margin-right: 5vw; } }
+
+.nav__menu-toggle:checked ~ .nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-black);
+  font-size: var(--font-size-medium-large); }
 
 .nav__link:link, .nav__link:visited {
   color: var(--color-white);
   text-decoration: none; }
 
 .nav__item {
-  padding: 1rem; }
+  padding: 1vw;
+  transition: all 0.1s; }
+
+.nav__item:hover {
+  transform: translateY(-2px); }
 
 .nav__item:hover > .nav__link {
-  color: var(--color-main); }
+  color: var(--color-primary); }
 
 .nav__menu-toggle {
   display: none; }
@@ -111,6 +155,9 @@ body {
   width: 7rem;
   border-radius: 100%;
   z-index: 1000; }
+  @media only screen and (min-width: 50em) {
+    .nav__menu-button {
+      display: none; } }
 
 .nav__menu-icon, .nav__menu-icon::before, .nav__menu-icon::after {
   width: 3rem;
@@ -141,24 +188,12 @@ body {
   top: 0;
   transform: rotate(-135deg); }
 
-.nav__menu-toggle:checked ~ .nav__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--color-black);
-  font-size: 3rem; }
-
 .logo {
   display: flex;
-  width: 15rem;
+  width: 20rem;
   height: 100%;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-right: auto;
   align-items: center;
   justify-content: center; }
   .logo__icon {
@@ -169,39 +204,47 @@ body {
     fill: var(--color-white); }
   .logo__name {
     display: inline-block;
-    color: var(--color-white); }
+    color: var(--color-white);
+    font-size: var(--font-size-medium-large); }
 
 .motto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 25rem;
-  width: 50vw;
+  height: 30rem;
+  margin: 0 25vw;
   justify-content: space-evenly;
   color: var(--color-white); }
   .motto__addressee {
     display: inline-block;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 600;
+    font-size: var(--font-size-large); }
   .motto__text {
     text-align: center;
-    font-weight: 500; }
+    font-weight: 500;
+    font-size: var(--font-size-medium); }
 
 .btn {
   font-family: inherit;
   text-transform: uppercase;
-  width: 13rem;
-  height: 4rem;
+  width: 15rem;
+  height: 5rem;
   border: 0; }
   .btn--transparent {
     color: var(--color-white);
     background-color: transparent;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border: 1px solid var(--color-white);
-    font-weight: 600; }
+    font-size: var(--font-size-medium-small);
+    font-weight: 600;
+    width: 20rem;
+    height: 6rem;
+    transition: all 0.1s; }
     .btn--transparent:hover {
       color: var(--color-black);
-      background-color: var(--color-white); }
+      background-color: var(--color-white);
+      transform: translateY(-2px); }
 
 .welcome {
   padding: 3rem;
@@ -244,12 +287,49 @@ body {
     margin-right: 1rem; }
 
 .about-card {
-  height: auto;
   flex-basis: 100%;
-  padding: 1rem; }
+  margin: 1rem;
+  font-size: var(--font-size-small); }
+  .about-card__img {
+    width: 100%;
+    height: auto; }
+  .about-card__paragraph, .about-card__heading-secondary {
+    margin-bottom: 1rem; }
+  .about-card__list {
+    list-style: none;
+    z-index: 1; }
+    .about-card__list-item {
+      position: relative;
+      margin-left: 3rem;
+      margin-bottom: 1rem; }
+      .about-card__list-item::before {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        top: 10%;
+        left: -3rem;
+        background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="%23FF4500" d="M10 0.4c-5.303 0-9.601 4.298-9.601 9.6 0 5.303 4.298 9.601 9.601 9.601 5.301 0 9.6-4.298 9.6-9.601s-4.299-9.6-9.6-9.6zM9.999 17.6c-4.197 0-7.6-3.402-7.6-7.6s3.402-7.6 7.6-7.6 7.601 3.403 7.601 7.6-3.404 7.6-7.601 7.6zM10 8h-4v4h4v2.5l4.5-4.5-4.5-4.5v2.5z"></path></svg>');
+        background-size: 3rem 3rem;
+        background-repeat: no-repeat;
+        height: 3rem;
+        width: 3rem; }
+  .about-card__label {
+    display: block;
+    cursor: pointer;
+    position: relative; }
+  .about-card__content {
+    max-height: 0;
+    transition: 0.3s all;
+    overflow: hidden; }
+  .about-card__toogle:checked ~ .about-card__content {
+    max-height: 50rem; }
 
 .team-member {
-  height: auto;
-  width: 80%;
   flex-basis: 50%;
-  padding: 1rem; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .team-member__photo {
+    width: 100%;
+    height: auto; }

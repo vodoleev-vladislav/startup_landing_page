@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
         <svg class="logo__icon">
           <use xlink:href="img/sprite.svg#icon-rocket"></use>
         </svg>
-        <h1 for="" class="logo__name">StartUp</h1>
+        <h1 class="logo__name">StartUp</h1>
       </div>
       <nav class="nav">
         <input type="checkbox" class="nav__menu-toggle" id="menu-toggle" />
@@ -36,8 +36,8 @@
     </header>
     <section class="motto-container">
       <div class="motto">
-        <span class="motto__addressee heading-large">Enterpreneur</span>
-        <h2 class="motto__text heading-small">
+        <span class="motto__addressee">Enterpreneur</span>
+        <h2 class="motto__text">
           Yes - Start, run and grow your business. Eos debitis prominus
         </h2>
         <button class="btn btn--transparent">Read more</button>
@@ -132,7 +132,7 @@
     </section>
     <section class="about">
       <div class="about__heading">
-        <h3 class="about__heading-main heading-large">
+        <h3 class="about__heading-main">
           About <span class="text-colored">StartUp</span>
         </h3>
         <p class="about__heading-sub">
@@ -141,15 +141,14 @@
         </p>
       </div>
       <div class="about-cards">
-        <article class="about-card">
+        <div class="about-card">
           <img
             src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg"
-            alt=""
-            class="about-card__tablet-photo"
-            height="50vh"
+            alt="Man browsing internet using tablet pc"
+            class="about-card__img"
           />
-        </article>
-        <article class="about-card">
+        </div>
+        <div class="about-card">
           <p class="about-card__paragraph">
             Lorem ipsum dolor sit amet, cadipisicing sit amet, consectetur
             adipisicing elit. Atque sed, quidem quis praesentium, ut unde fuga
@@ -174,8 +173,8 @@
               Quo issimos molest quibusdam temporibus
             </li>
           </ul>
-        </article>
-        <article class="about-card">
+        </div>
+        <div class="about-card">
           <h3 class="about-card__heading-secondary">
             Amazing free bootstrap template
           </h3>
@@ -203,12 +202,19 @@
             elit. Atque sed, quidem quis praesentium, ut unde molestias velit
             eveniet, facere autem saepe autrunt.
           </p>
-        </article>
-        <article class="about-card">
+        </div>
+        <div class="about-card">
           <div class="about-card__accordion">
-            <input id="about-card__toggle1" type="checkbox" name="toggle" />
-            <label for="about-card__toggle1">Collapsible Group Item #1</label>
-            <section id="content1">
+            <input
+              class="about-card__toggle"
+              id="about-card__toggle1"
+              type="checkbox"
+              name="toggle"
+            />
+            <label class="about-card__label" for="about-card__toggle1"
+              >Collapsible Group Item #1</label
+            >
+            <section class="about-card__content" id="content1">
               <p>
                 Consectetur adipisicing sit amet, consectetur adipisicing elit.
                 Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt
@@ -219,9 +225,16 @@
                 labore rem deserunt.
               </p>
             </section>
-            <input id="about-card__toggle2" type="checkbox" name="toggle" />
-            <label for="about-card__toggle2">Collapsible Group Item #2</label>
-            <section id="content2">
+            <input
+              class="about-card__toggle"
+              id="about-card__toggle2"
+              type="checkbox"
+              name="toggle"
+            />
+            <label class="about-card__label" for="about-card__toggle2"
+              >Collapsible Group Item #2</label
+            >
+            <section class="about-card__content" id="content2">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
                 sed, quidem quis praesentium, ut unde. Quae sed, incidunt
@@ -232,9 +245,16 @@
                 labore rem deserunt.
               </p>
             </section>
-            <input id="about-card__toggle3" type="checkbox" name="toggle" />
-            <label for="about-card__toggle3">Collapsible Group Item #3</label>
-            <section id="content3">
+            <input
+              class="about-card__toggle"
+              id="about-card__toggle3"
+              type="checkbox"
+              name="toggle"
+            />
+            <label class="about-card__label" for="about-card__toggle3"
+              >Collapsible Group Item #3</label
+            >
+            <section class="about-card__content" id="content3">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Excepturi adipisci illo, voluptatum ipsam fuga error commodi
@@ -243,7 +263,7 @@
               </p>
             </section>
           </div>
-        </article>
+        </div>
       </div>
     </section>
     <section class="team">
@@ -254,32 +274,50 @@
         </p>
       </div>
       <div class="team-members">
-        <div class="team-member">
+        <figure class="team-member">
           <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <p class="team-member__name">John Doe</p>
-          <p class="team-member__position">Genereal Manager</p>
-        </div>
-        <div class="team-member">
+          <figcaption class="team-member__about">
+            <p class="team-member__name">John Doe</p>
+            <p class="team-member__position">Genereal Manager</p>
+          </figcaption>
+        </figure>
+        <figure class="team-member">
           <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <p class="team-member__name">John Doe</p>
-          <p class="team-member__position">Genereal Manager</p>
-        </div>
-        <div class="team-member">
+          <figcaption class="team-member__about">
+            <p class="team-member__name">John Doe</p>
+            <p class="team-member__position">Genereal Manager</p>
+          </figcaption>
+        </figure>
+        <figure class="team-member">
           <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <p class="team-member__name">John Doe</p>
-          <p class="team-member__position">Genereal Manager</p>
-        </div>
-        <div class="team-member">
+          <figcaption class="team-member__about">
+            <p class="team-member__name">John Doe</p>
+            <p class="team-member__position">Genereal Manager</p>
+          </figcaption>
+        </figure>
+        <figure class="team-member">
           <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <p class="team-member__name">John Doe</p>
-          <p class="team-member__position">Genereal Manager</p>
-        </div>
+          <figcaption class="team-member__about">
+            <p class="team-member__name">John Doe</p>
+            <p class="team-member__position">Genereal Manager</p>
+          </figcaption>
+        </figure>
       </div>
     </section>
     <section class="portfolio"></section>
     <section class="testimonials"></section>
     <section class="prices"></section>
-    <section class="contact"></section>
+    <section class="contact">
+      <h4 class="contact__heading">
+        Contact Us
+      </h4>
+      <form class="contact__form">
+        <input type="name" class="contact__name" placeholder="Name" />
+        <input type="text" class="contact__email" placeholder="Email" />
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
     <footer class="footer"></footer>
   </body>
 </html>
