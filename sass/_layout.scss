@@ -65,6 +65,19 @@
 }
 
 .team {
+  &__heading {
+    text-align: center;
+    margin: 0 5vw;
+
+    &-main {
+      font-size: var(--font-size-medium-large);
+    }
+
+    &-sub {
+      font-size: var(--font-size-medium);
+    }
+  }
+
   &-members {
     display: flex;
     flex-flow: row wrap;

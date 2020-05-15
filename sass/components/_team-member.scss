@@ -4,8 +4,66 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 2rem;
+  overflow: auto;
+
   &__photo {
     width: 100%;
     height: auto;
+  }
+
+  &__name,
+  &__position {
+    margin: 1rem 0;
+    font-size: var(--font-size-medium);
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    width: 49.8%;
+    height: 6rem;
+    background-color: var(--color-grey-light);
+    transition: all 0.1s;
+
+    &--twitter {
+      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 1rem;
+      &:hover {
+        background-color: var(--color-twitter);
+      }
+    }
+
+    &--facebook {
+      border-bottom-right-radius: 1rem;
+      border-top-right-radius: 1rem;
+      &:hover {
+        background-color: var(--color-facebook);
+      }
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__link:hover > &__icon {
+    fill: var(--color-white);
+  }
+
+  &__icon {
+    width: 4rem;
+    height: auto;
+    fill: var(--color-grey-dark);
   }
 }

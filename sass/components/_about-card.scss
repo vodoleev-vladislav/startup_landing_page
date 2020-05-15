@@ -1,6 +1,6 @@
 .about-card {
   flex-basis: 100%;
-  margin: 1rem;
+  margin: 2rem;
   font-size: var(--font-size-small);
   &__img {
     width: 100%;
@@ -29,65 +29,5 @@
         margin-right: 1rem;
       }
     }
-  }
-}
-
-.accordion {
-  &__item {
-    width: 100%;
-    color: var(--color-black);
-    overflow: hidden;
-
-    &-label {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
-      background: var(--color-white);
-      cursor: pointer;
-
-      &:hover {
-        color: var(--color-quaternary);
-      }
-      &::after {
-        content: "\229E";
-      }
-    }
-    &-content {
-      max-height: 0;
-      padding: 0 1rem;
-      color: var(--color-black);
-      background: var(--color-white);
-      transition: all 0.35s;
-    }
-    &-close {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      font-size: var(--font-size-small);
-      background: va(--color-white);
-      cursor: pointer;
-      &:hover {
-        color: var(--color-quaternary);
-      }
-    }
-
-    &-radio {
-      position: absolute;
-      opacity: 0;
-      z-index: -1;
-    }
-  }
-}
-
-.accordion__item-radio:checked {
-  + .accordion__item-label {
-    background: var(--color-grey-light);
-    &::after {
-      content: "\229F";
-    }
-  }
-  ~ .accordion__item-content {
-    max-height: 100vh;
-    padding: 1em;
   }
 }
