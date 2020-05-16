@@ -488,3 +488,57 @@ body {
     fill: var(--color-skype); }
   .social__link:hover > .social__icon--linkedin {
     fill: var(--color-linkedin); }
+
+.portfolio__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none; }
+
+.portfolio__item {
+  flex-basis: 25%;
+  padding: 1rem;
+  transition: all 0.5s; }
+
+.portfolio__img {
+  max-width: 100%; }
+
+.portfolio__select {
+  display: none; }
+
+.portfolio__link {
+  display: block; }
+
+#web:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--web),
+#app:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--app),
+#mobile:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--mobile) {
+  display: none; }
+
+.portfolio #web:checked [cat="web"] {
+  display: none; }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden; }
+  .modal:target {
+    opacity: 1;
+    visibility: visible; }
+  .modal__content {
+    width: 75%;
+    height: 75%;
+    background-color: var(--color-white);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .modal__img {
+    max-width: 100%; }
+  .modal__close {
+    text-decoration: none; }
