@@ -489,33 +489,54 @@ body {
   .social__link:hover > .social__icon--linkedin {
     fill: var(--color-linkedin); }
 
-.portfolio__list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  list-style: none; }
-
-.portfolio__item {
-  flex-basis: 25%;
-  padding: 1rem;
-  transition: all 0.5s; }
-
-.portfolio__img {
-  max-width: 100%; }
-
-.portfolio__select {
-  display: none; }
-
-.portfolio__link {
-  display: block; }
-
-#web:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--web),
-#app:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--app),
-#mobile:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--mobile) {
-  display: none; }
-
-.portfolio #web:checked [cat="web"] {
-  display: none; }
+.portfolio {
+  overflow: hidden;
+  position: relative;
+  font-size: var(--font-size-small);
+  padding: 1rem; }
+  .portfolio__label {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--color-grey-dark);
+    padding: 1rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    text-align: center; }
+    .portfolio__label:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white); }
+  .portfolio__select:checked + .portfolio__label {
+    background-color: var(--color-primary);
+    color: var(--color-white); }
+  .portfolio__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none; }
+  .portfolio__item {
+    flex-basis: 50%;
+    position: relative;
+    padding: 1rem;
+    right: 0px;
+    transition: all 0.3s; }
+  .portfolio__img {
+    max-width: 100%; }
+  .portfolio__select {
+    display: none; }
+  .portfolio__link {
+    display: block; }
+  #web:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--web),
+  #app:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--app),
+  #mobile:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--mobile) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    right: -50%; }
+  .portfolio #web:checked [cat="web"] {
+    display: none; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.8);

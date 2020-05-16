@@ -1,4 +1,28 @@
 .portfolio {
+  overflow: hidden;
+  position: relative;
+  font-size: var(--font-size-small);
+  padding: 1rem;
+  &__label {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--color-grey-dark);
+    padding: 1rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+  }
+
+  &__select:checked + &__label {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
   &__list {
     display: flex;
     flex-flow: row wrap;
@@ -7,9 +31,11 @@
   }
 
   &__item {
-    flex-basis: 25%;
+    flex-basis: 50%;
+    position: relative;
     padding: 1rem;
-    transition: all 0.5s;
+    right: 0px;
+    transition: all 0.3s;
   }
 
   &__img {
@@ -27,7 +53,13 @@
   #web:checked ~ &__list &__item:not(&__item--web),
   #app:checked ~ &__list &__item:not(&__item--app),
   #mobile:checked ~ &__list &__item:not(&__item--mobile) {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    right: -50%;
   }
 
   #web:checked [cat="web"] {
