@@ -86,12 +86,68 @@
 }
 
 .contact {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-size-small);
+  padding: 2rem;
+
+  &-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  &-form {
+    flex-basis: 100%;
+    padding: 2rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__name,
+    &__email {
+      display: block;
+      height: 4rem;
+      padding-left: 1rem;
+    }
+
+    &__textarea {
+      font-family: inherit;
+      padding-left: 1rem;
+    }
+  }
+
   &__heading {
     margin: 0 5vw;
     font-size: var(--font-size-medium);
     text-align: center;
   }
-  background-color: var(--color-black);
-  color: var(--color-white);
-  height: 80rem;
+
+  &-about {
+    flex-basis: 100%;
+    padding: 2rem;
+    &__text {
+      margin-bottom: 1rem;
+    }
+    &__list {
+      list-style: none;
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+
+    &__link:link,
+    &__link:visited {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
+    &__icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: var(--color-white);
+    }
+  }
 }

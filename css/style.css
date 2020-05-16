@@ -119,11 +119,47 @@ body {
 .contact {
   background-color: var(--color-black);
   color: var(--color-white);
-  height: 80rem; }
+  font-size: var(--font-size-small);
+  padding: 2rem; }
+  .contact-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; }
+  .contact-form {
+    flex-basis: 100%;
+    padding: 2rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .contact-form__name, .contact-form__email {
+      display: block;
+      height: 4rem;
+      padding-left: 1rem; }
+    .contact-form__textarea {
+      font-family: inherit;
+      padding-left: 1rem; }
   .contact__heading {
     margin: 0 5vw;
     font-size: var(--font-size-medium);
     text-align: center; }
+  .contact-about {
+    flex-basis: 100%;
+    padding: 2rem; }
+    .contact-about__text {
+      margin-bottom: 1rem; }
+    .contact-about__list {
+      list-style: none; }
+    .contact-about__link {
+      display: flex;
+      align-items: center; }
+    .contact-about__link:link, .contact-about__link:visited {
+      color: var(--color-white);
+      text-decoration: none; }
+    .contact-about__icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: var(--color-white); }
 
 .nav__list {
   list-style: none;
@@ -343,8 +379,8 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem;
-  overflow: auto; }
+  overflow: auto;
+  padding: 2rem; }
   .team-member__photo {
     width: 100%;
     height: auto; }
@@ -426,15 +462,6 @@ body {
   max-height: 100vh;
   padding: 1em; }
 
-.form {
-  margin: 0 5vw;
-  height: 35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; }
-  .form__textarea {
-    font-family: inherit; }
-
 .social {
   display: flex;
   flex-direction: row; }
@@ -443,15 +470,15 @@ body {
     margin: 1rem; }
   .social__link {
     display: flex;
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
     justify-content: center;
     align-items: center;
     border: 2px solid var(--color-white);
     border-radius: 50%; }
   .social__icon {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     fill: var(--color-white); }
   .social__link:hover > .social__icon--facebook {
     fill: var(--color-facebook); }
