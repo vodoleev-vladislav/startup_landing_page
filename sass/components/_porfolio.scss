@@ -1,8 +1,6 @@
 .portfolio {
-  overflow: hidden;
-  position: relative;
   font-size: var(--font-size-small);
-  padding: 1rem;
+  margin: 1rem;
   &__label {
     display: block;
     width: 100%;
@@ -28,18 +26,50 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     list-style: none;
+    // position: relative;
+    // overflow: hidden;
   }
 
   &__item {
-    flex-basis: 50%;
+    flex-basis: 48%;
     position: relative;
-    padding: 1rem;
+    margin: 1%;
     right: 0px;
-    transition: all 0.3s;
+    transition: all 0.5s;
   }
 
   &__img {
     max-width: 100%;
+    min-height: 100%;
+  }
+
+  &__overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--color-primary-dec), 0.8);
+    transition: all 0.3s;
+
+    &-icon {
+      fill: var(--color-white);
+      height: 25%;
+    }
+  }
+
+  &__link:hover > &__overlay {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--color-primary-dec), 0.5);
   }
 
   &__select {
@@ -48,22 +78,16 @@
 
   &__link {
     display: block;
+    cursor: pointer;
   }
 
-  #web:checked ~ &__list &__item:not(&__item--web),
-  #app:checked ~ &__list &__item:not(&__item--app),
-  #mobile:checked ~ &__list &__item:not(&__item--mobile) {
+  #web:checked ~ &__list > &__item:not([category="web"]),
+  #app:checked ~ &__list > &__item:not([category="app"]),
+  #mobile:checked ~ &__list > &__item:not([category="mobile"]) {
     opacity: 0;
     visibility: hidden;
-    position: absolute;
-    width: 50%;
-    height: auto;
-    top: 50%;
-    right: -50%;
-  }
-
-  #web:checked [cat="web"] {
-    display: none;
+    margin: 0;
+    flex-basis: 0%;
   }
 }
 

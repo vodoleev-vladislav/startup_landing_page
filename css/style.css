@@ -1,5 +1,6 @@
 :root {
   --color-primary: #ff4500;
+  --color-primary-dec: 255, 69, 0;
   --color-secondary: #00ff45;
   --color-tertiary: #00baff;
   --color-quaternary: #ff00ba;
@@ -65,7 +66,8 @@ body {
   width: 100%;
   height: 10vh;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  z-index: 1; }
   @media only screen and (min-width: 50em) {
     .header {
       position: fixed;
@@ -490,10 +492,8 @@ body {
     fill: var(--color-linkedin); }
 
 .portfolio {
-  overflow: hidden;
-  position: relative;
   font-size: var(--font-size-small);
-  padding: 1rem; }
+  margin: 1rem; }
   .portfolio__label {
     display: block;
     width: 100%;
@@ -514,29 +514,49 @@ body {
     justify-content: flex-start;
     list-style: none; }
   .portfolio__item {
-    flex-basis: 50%;
+    flex-basis: 48%;
     position: relative;
-    padding: 1rem;
+    margin: 1%;
     right: 0px;
-    transition: all 0.3s; }
+    transition: all 0.5s; }
   .portfolio__img {
-    max-width: 100%; }
-  .portfolio__select {
-    display: none; }
-  .portfolio__link {
-    display: block; }
-  #web:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--web),
-  #app:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--app),
-  #mobile:checked ~ .portfolio__list .portfolio__item:not(.portfolio__item--mobile) {
+    max-width: 100%;
+    min-height: 100%; }
+  .portfolio__overlay {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    width: 50%;
-    height: auto;
     top: 50%;
-    right: -50%; }
-  .portfolio #web:checked [cat="web"] {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--color-primary-dec), 0.8);
+    transition: all 0.3s; }
+    .portfolio__overlay-icon {
+      fill: var(--color-white);
+      height: 25%; }
+  .portfolio__link:hover > .portfolio__overlay {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--color-primary-dec), 0.5); }
+  .portfolio__select {
     display: none; }
+  .portfolio__link {
+    display: block;
+    cursor: pointer; }
+  #web:checked ~ .portfolio__list > .portfolio__item:not([category="web"]),
+  #app:checked ~ .portfolio__list > .portfolio__item:not([category="app"]),
+  #mobile:checked ~ .portfolio__list > .portfolio__item:not([category="mobile"]) {
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+    flex-basis: 0%; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.8);

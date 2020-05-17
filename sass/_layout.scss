@@ -6,6 +6,7 @@
   height: 10vh;
   display: flex;
   align-items: center;
+  z-index: 1;
 
   @media only screen and (min-width: $bp-medium) {
     position: fixed;
