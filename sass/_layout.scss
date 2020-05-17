@@ -1,4 +1,18 @@
-.header {
+.main {
+  & > * > :first-child {
+    padding-top: 3rem;
+  }
+
+  & > * > :last-child {
+    padding-bottom: 3rem;
+  }
+
+  & > * {
+    padding: 0 2rem;
+  }
+}
+
+.top-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,7 +24,7 @@
 
   @media only screen and (min-width: $bp-medium) {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -32,7 +46,19 @@
 }
 
 .welcome {
-  padding: 2rem;
+  // padding: 2rem;
+  text-align: center;
+
+  &__heading {
+    font-weight: 500;
+    font-size: var(--font-size-medium-large);
+    // margin: 0 2rem;
+    // margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: var(--font-size-small);
+  }
 }
 
 .services {
@@ -42,6 +68,10 @@
     text-align: center;
     margin-bottom: 2rem;
   }
+
+  // & > *:last-child {
+  //   padding-bottom: 5rem;
+  // }
 }
 
 .about {
@@ -68,7 +98,7 @@
 .team {
   &__heading {
     text-align: center;
-    margin: 0 5vw;
+    // margin: 0 5vw;
 
     &-main {
       font-size: var(--font-size-medium-large);
@@ -91,6 +121,15 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: var(--font-size-medium);
+
+    &-sub {
+      text-align: center;
+    }
   }
 }
 

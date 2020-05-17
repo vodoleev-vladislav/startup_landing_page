@@ -31,8 +31,9 @@
   &__link {
     display: flex;
     justify-content: center;
-    width: 49.8%;
-    height: 6rem;
+    align-items: center;
+    width: 49.5%;
+    height: 4rem;
     background-color: var(--color-grey-light);
     transition: all 0.1s;
 
@@ -62,8 +63,8 @@
   }
 
   &__icon {
-    width: 4rem;
-    height: auto;
+    width: auto;
+    height: 60%;
     fill: var(--color-grey-dark);
   }
 }

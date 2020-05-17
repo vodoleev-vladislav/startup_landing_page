@@ -1,6 +1,6 @@
 .price {
-  flex-basis: 40%;
-  margin: 5%;
+  flex-basis: 44%;
+  margin: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
   }
 
   & > .btn {
-    margin: 2rem;
+    margin: 2rem 0;
   }
 
   &__heading {

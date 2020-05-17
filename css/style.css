@@ -59,7 +59,16 @@ body {
 .text-colored {
   color: var(--color-primary); }
 
-.header {
+.main > * > :first-child {
+  padding-top: 3rem; }
+
+.main > * > :last-child {
+  padding-bottom: 3rem; }
+
+.main > * {
+  padding: 0 2rem; }
+
+.top-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,9 +78,9 @@ body {
   align-items: center;
   z-index: 1; }
   @media only screen and (min-width: 50em) {
-    .header {
+    .top-bar {
       position: fixed;
-      background-color: rgba(0, 0, 0, 0.9); } }
+      background-color: rgba(0, 0, 0, 0.8); } }
 
 .motto-container {
   height: 100vh;
@@ -84,7 +93,12 @@ body {
   justify-content: space-evenly; }
 
 .welcome {
-  padding: 2rem; }
+  text-align: center; }
+  .welcome__heading {
+    font-weight: 500;
+    font-size: var(--font-size-medium-large); }
+  .welcome__text {
+    font-size: var(--font-size-small); }
 
 .services {
   background-color: var(--color-grey-light); }
@@ -106,8 +120,7 @@ body {
   justify-content: flex-start; }
 
 .team__heading {
-  text-align: center;
-  margin: 0 5vw; }
+  text-align: center; }
   .team__heading-main {
     font-size: var(--font-size-medium-large); }
   .team__heading-sub {
@@ -122,6 +135,12 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start; }
+
+.prices__heading {
+  text-align: center;
+  font-size: var(--font-size-medium); }
+  .prices__heading-sub {
+    text-align: center; }
 
 .contact {
   background-color: var(--color-black);
@@ -339,7 +358,8 @@ body {
     border: 1px solid var(--color-white);
     font-size: var(--font-size-medium-small);
     font-weight: 600;
-    width: 20rem;
+    max-width: 20rem;
+    width: 100%;
     height: 6rem; }
     .btn--transparent:hover {
       color: var(--color-black);
@@ -349,16 +369,6 @@ body {
     background-color: var(--color-primary); }
     .btn--main:hover {
       background-color: var(--color-secondary); }
-
-.welcome {
-  padding: 2rem;
-  text-align: center; }
-  .welcome__heading {
-    font-weight: 500;
-    margin: 0 2rem;
-    margin-bottom: 1rem; }
-  .welcome__text {
-    font-size: var(--font-size-small); }
 
 .service {
   display: grid;
@@ -371,6 +381,7 @@ body {
     fill: var(--color-primary); }
     .service__icon-box {
       justify-self: center;
+      align-self: flex-start;
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
       height: 6rem;
@@ -382,17 +393,16 @@ body {
       border-radius: 100%; }
   .service__heading {
     grid-column: 2 / -1;
-    grid-row: 1 / span 1; }
+    grid-row: 1 / span 1;
+    margin-bottom: 1rem; }
   .service__description {
     grid-column: 2 / -1;
     grid-row: 2 / span 1;
     font-size: var(--font-size-small);
-    color: var(--color-grey-dark);
-    margin-right: 1rem; }
+    color: var(--color-grey-dark); }
 
 .about-card {
   flex-basis: 100%;
-  margin: 2rem;
   font-size: var(--font-size-small); }
   .about-card__img {
     width: 100%;
@@ -436,8 +446,9 @@ body {
   .team-member__link {
     display: flex;
     justify-content: center;
-    width: 49.8%;
-    height: 6rem;
+    align-items: center;
+    width: 49.5%;
+    height: 4rem;
     background-color: var(--color-grey-light);
     transition: all 0.1s; }
     .team-member__link--twitter {
@@ -455,8 +466,8 @@ body {
   .team-member__link:hover > .team-member__icon {
     fill: var(--color-white); }
   .team-member__icon {
-    width: 4rem;
-    height: auto;
+    width: auto;
+    height: 60%;
     fill: var(--color-grey-dark); }
 
 .accordion__item {
@@ -535,7 +546,7 @@ body {
   overflow: hidden; }
   .portfolio__label {
     display: block;
-    width: 92vw;
+    width: 85vw;
     border: 2px solid var(--color-grey-dark);
     padding: 1rem;
     margin: 1rem auto;
@@ -565,13 +576,13 @@ body {
   .portfolio__caption {
     color: var(--color-white);
     text-transform: uppercase;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 20%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -651,8 +662,8 @@ body {
     text-decoration: none; }
 
 .price {
-  flex-basis: 40%;
-  margin: 5%;
+  flex-basis: 44%;
+  margin: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -662,7 +673,7 @@ body {
     width: 100%;
     text-align: center; }
   .price > .btn {
-    margin: 2rem; }
+    margin: 2rem 0; }
   .price__heading {
     font-size: var(--font-size-medium-small);
     font-weight: 600;

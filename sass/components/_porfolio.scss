@@ -4,7 +4,7 @@
   overflow: hidden;
   &__label {
     display: block;
-    width: 92vw;
+    width: 85vw;
     border: 2px solid var(--color-grey-dark);
     padding: 1rem;
     margin: 1rem auto;
@@ -48,13 +48,13 @@
   &__caption {
     color: var(--color-white);
     text-transform: uppercase;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 20%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
