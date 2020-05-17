@@ -496,10 +496,10 @@ body {
   margin: 1rem; }
   .portfolio__label {
     display: block;
-    width: 100%;
+    width: 92vw;
     border: 2px solid var(--color-grey-dark);
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem auto;
     text-transform: uppercase;
     text-align: center; }
     .portfolio__label:hover {
@@ -514,14 +514,29 @@ body {
     justify-content: flex-start;
     list-style: none; }
   .portfolio__item {
-    flex-basis: 48%;
+    flex-basis: 46%;
     position: relative;
-    margin: 1%;
+    margin: 2%;
     right: 0px;
     transition: all 0.5s; }
   .portfolio__img {
-    max-width: 100%;
-    min-height: 100%; }
+    display: block;
+    width: 100%;
+    position: relative; }
+  .portfolio__caption {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: var(--font-size-medium);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); }
   .portfolio__overlay {
     opacity: 0;
     visibility: hidden;
@@ -529,8 +544,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
+    width: 33%;
+    height: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -572,14 +587,26 @@ body {
     opacity: 1;
     visibility: visible; }
   .modal__content {
-    width: 75%;
-    height: 75%;
+    width: 80%;
+    height: 80%;
     background-color: var(--color-white);
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    overflow-y: auto; }
+  .modal__header {
+    display: flex;
+    align-items: center;
+    height: 10%; }
+  .modal__title {
+    margin-left: 1rem;
+    margin-right: auto; }
+  .modal__close {
+    padding-right: 1rem;
+    font-size: var(--font-size-large); }
   .modal__img {
+    display: block;
     max-width: 100%; }
   .modal__close {
     text-decoration: none; }
