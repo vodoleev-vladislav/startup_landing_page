@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: var(--font-size-medium-small);
+  font-size: var(--font-size-small);
   border: 2px solid var(--color-grey-light);
 
   & > :not(.btn) {
@@ -17,7 +17,7 @@
   }
 
   &__heading {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-medium-small);
     font-weight: 600;
     display: inline-block;
     padding: 3rem;

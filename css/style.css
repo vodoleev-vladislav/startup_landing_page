@@ -135,23 +135,31 @@ body {
   .contact-form {
     flex-basis: 100%;
     padding: 2rem;
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
-    .contact-form__name, .contact-form__email {
-      display: block;
-      height: 4rem;
-      padding-left: 1rem;
+    .contact-form__input-container {
       position: relative; }
-    .contact-form__name + .contact-form__icon {
+    .contact-form__input {
+      display: block;
+      height: 5rem; }
+    .contact-form__icon {
       fill: var(--color-grey-dark);
       position: absolute;
-      right: 0;
-      top: 0; }
+      right: 1rem;
+      top: 0;
+      transform: translateY(50%);
+      height: 2.5rem;
+      width: 2.5rem; }
+    .contact-form__input, .contact-form__textarea {
+      padding-left: 1rem;
+      padding-right: 4rem;
+      width: 100%; }
     .contact-form__textarea {
+      padding-top: 1rem;
       font-family: inherit;
-      padding-left: 1rem; }
+      resize: none; }
   .contact__heading {
     margin: 0 5vw;
     font-size: var(--font-size-medium);
@@ -173,6 +181,25 @@ body {
       height: 2.5rem;
       width: 2.5rem;
       fill: var(--color-white); }
+
+.footer {
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem; }
+  .footer__heading {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    color: var(--color-white);
+    display: inline-block;
+    width: 75vw; }
+  .footer__icon {
+    fill: var(--color-primary);
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem;
+    transform: translateY(50%); }
 
 .nav__list {
   list-style: none;
@@ -504,7 +531,8 @@ body {
 
 .portfolio {
   font-size: var(--font-size-small);
-  margin: 1rem; }
+  margin: 1rem;
+  overflow: hidden; }
   .portfolio__label {
     display: block;
     width: 92vw;
@@ -628,7 +656,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: var(--font-size-medium-small);
+  font-size: var(--font-size-small);
   border: 2px solid var(--color-grey-light); }
   .price > :not(.btn) {
     width: 100%;
@@ -636,7 +664,7 @@ body {
   .price > .btn {
     margin: 2rem; }
   .price__heading {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-medium-small);
     font-weight: 600;
     display: inline-block;
     padding: 3rem;

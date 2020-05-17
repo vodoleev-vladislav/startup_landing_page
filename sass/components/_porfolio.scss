@@ -1,6 +1,7 @@
 .portfolio {
   font-size: var(--font-size-small);
   margin: 1rem;
+  overflow: hidden;
   &__label {
     display: block;
     width: 92vw;
