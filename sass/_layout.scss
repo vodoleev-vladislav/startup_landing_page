@@ -1,10 +1,10 @@
 .main {
   & > * > :first-child {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 
   & > * > :last-child {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
   & > * {
@@ -82,27 +82,9 @@
     flex-flow: row wrap;
     justify-content: flex-start;
   }
-
-  // & > *:last-child {
-  //   padding-bottom: 5rem;
-  // }
 }
 
 .about {
-  &__heading {
-    text-align: center;
-    margin-bottom: 2rem;
-    // margin: 0 5vw;
-
-    &-main {
-      font-size: var(--font-size-medium-large);
-    }
-
-    &-sub {
-      font-size: var(--font-size-medium-small);
-    }
-  }
-
   &-cards {
     display: flex;
     flex-flow: row wrap;
@@ -110,21 +92,12 @@
   }
 }
 
+.template {
+  background-color: var(--color-grey-light);
+  overflow: hidden;
+}
+
 .team {
-  &__heading {
-    text-align: center;
-    margin-bottom: 2rem;
-    // margin: 0 5vw;
-
-    &-main {
-      font-size: var(--font-size-medium-large);
-    }
-
-    &-sub {
-      font-size: var(--font-size-medium-small);
-    }
-  }
-
   &-members {
     display: flex;
     flex-flow: row wrap;
@@ -168,7 +141,7 @@
   &-form {
     flex-basis: 100%;
     padding: 2rem;
-    height: 40rem;
+    height: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -197,6 +170,10 @@
       padding-left: 1rem;
       padding-right: 4rem;
       width: 100%;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     &__textarea {
@@ -205,15 +182,9 @@
       resize: none;
     }
 
-    @media only screen and (min-width: $bp-medium) {
+    @media only screen and (min-width: $bp-large) {
       flex-basis: 50%;
     }
-  }
-
-  &__heading {
-    margin: 0 5vw;
-    font-size: var(--font-size-medium);
-    text-align: center;
   }
 
   &-about {
@@ -242,7 +213,7 @@
       fill: var(--color-white);
     }
 
-    @media only screen and (min-width: $bp-medium) {
+    @media only screen and (min-width: $bp-large) {
       flex-basis: 50%;
     }
   }

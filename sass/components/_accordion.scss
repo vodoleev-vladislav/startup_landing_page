@@ -3,6 +3,7 @@
     width: 100%;
     color: var(--color-black);
     overflow: hidden;
+    border: 1px solid var(--color-grey-dark);
 
     &-label {
       display: flex;
@@ -22,7 +23,7 @@
       max-height: 0;
       padding: 0 1rem;
       color: var(--color-black);
-      background: var(--color-white);
+      background: var(--color-grey-light);
       transition: all 0.35s;
     }
     &-close {
@@ -30,7 +31,7 @@
       justify-content: flex-end;
       padding: 1rem;
       font-size: var(--font-size-small);
-      background: va(--color-white);
+      background: var(--color-white);
       cursor: pointer;
       &:hover {
         color: var(--color-quaternary);

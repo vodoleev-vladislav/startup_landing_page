@@ -2,7 +2,6 @@
   &__list {
     list-style: none;
     display: none;
-    font-size: var(--font-size-medium);
 
     visibility: hidden;
     opacity: 0;
@@ -23,7 +22,6 @@
     @media only screen and (min-width: $bp-large) {
       display: flex;
       flex-direction: row;
-      // margin-right: 5vw;
       transition: none;
       width: 100%;
       height: auto;
@@ -31,6 +29,7 @@
       opacity: 1;
       visibility: visible;
       background-color: transparent;
+      font-size: var(--font-size-medium);
     }
   }
 
@@ -47,8 +46,11 @@
   }
 
   &__item {
-    padding: 1vw;
+    padding: 0.5vh;
     transition: all 0.1s;
+    @media only screen and (min-width: $bp-large) {
+      padding: 1vw;
+    }
   }
 
   &__item:hover {

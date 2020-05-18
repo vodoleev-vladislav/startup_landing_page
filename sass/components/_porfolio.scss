@@ -1,26 +1,17 @@
 .portfolio {
-  font-size: var(--font-size-small);
-  margin: 1rem;
   overflow: hidden;
-
-  &__heading {
-    font-size: var(--font-size-medium-large);
-    text-align: center;
-  }
-
-  &__about {
-    font-size: (--font-size-medium-small);
-    text-align: center;
-  }
+  background-color: var(--color-grey-light);
 
   &__label {
     display: block;
-    width: 85vw;
+    width: 96%;
     border: 2px solid var(--color-grey-dark);
     padding: 1rem;
-    margin: 1rem auto;
+    margin: 1rem 2%;
+    font-size: var(--font-size-small);
     text-transform: uppercase;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
       background-color: var(--color-primary);
@@ -30,6 +21,8 @@
     @media only screen and (min-width: $bp-medium) {
       display: inline-block;
       width: auto;
+      margin: 0;
+      margin-left: 1%;
     }
   }
 
@@ -43,8 +36,6 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     list-style: none;
-    // position: relative;
-    // overflow: hidden;
   }
 
   &__item {
@@ -76,11 +67,15 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 30%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 2vw;
+    }
   }
 
   &__overlay {
@@ -121,9 +116,9 @@
     cursor: pointer;
   }
 
-  #web:checked ~ &__list > &__item:not([category="web"]),
-  #app:checked ~ &__list > &__item:not([category="app"]),
-  #mobile:checked ~ &__list > &__item:not([category="mobile"]) {
+  #web:checked ~ &__list > &__item:not([data-category="web"]),
+  #app:checked ~ &__list > &__item:not([data-category="app"]),
+  #mobile:checked ~ &__list > &__item:not([data-category="mobile"]) {
     opacity: 0;
     visibility: hidden;
     margin: 0;

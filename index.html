@@ -25,15 +25,15 @@
           <span class="nav__menu-icon"></span>
         </label>
         <ul class="nav__list">
-          <li class="nav__item"><a href="" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Services</a></li>
-          <li class="nav__item"><a href="" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item">
-            <a href="" class="nav__link">Portfolio</a>
+            <a href="#portfolio" class="nav__link">Portfolio</a>
           </li>
-          <li class="nav__item"><a href="" class="nav__link">Team</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Price</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+          <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
+          <li class="nav__item"><a href="#price" class="nav__link">Price</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -48,7 +48,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="welcome">
+    <section class="welcome" id="home">
       <div class="welcome__heading section-heading">
         <h2 class="welcome__heading-main">
           welcome to <span class="text-bold">StartUp</span> -
@@ -62,7 +62,7 @@
         </p>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id=services>
       <div class="services__heading section-heading">
         <h3 class="services__heading-main">Services</h3>
       </div>
@@ -141,8 +141,8 @@
         </div>
       </div>
     </section>
-    <section class="about">
-      <div class="about__heading">
+    <section class="about" id="about">
+      <div class="about__heading section-heading">
         <h3 class="about__heading-main">
           About <span class="text-colored">StartUp</span>
         </h3>
@@ -208,11 +208,7 @@
               <div class="accordion__item-content">
                 Consectetur adipisicing sit amet, consectetur adipisicing
                 elit. Atque sed, quidem quis praesentium, ut unde. Quae sed,
-                incidunt laudantium nesciunt, optio corporis quod earum
-                pariatur omnis illo saepe numquam suscipit, nemo placeat
-                ntium, ut unde. Quae sed, incidunt laudantium nesciunt, optio
-                corporis quod earumdignissimos eius mollitia et quas officia
-                doloremque ipsum labore rem deserunt.
+                incidunt laudantium nesciunt.
               </div>
             </div>
             <div class="accordion__item">
@@ -221,11 +217,7 @@
               <div class="accordion__item-content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Atque sed, quidem quis praesentium, ut unde. Quae sed,
-                incidunt laudantium nesciunt, optio corporis quod earum
-                pariatur omnis illo saepe numquam suscipit, nemo placeat
-                ntium, ut unde. Quae sed, incidunt laudantium nesciunt, optio
-                corporis quod earumdignissimos eius mollitia et quas officia
-                doloremque ipsum labore rem deserunt.
+                incidunt laudantium nesciunt.
               </div>
             </div>
             <div class="accordion__item">
@@ -234,8 +226,7 @@
               <div class="accordion__item-content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Excepturi adipisci illo, voluptatum ipsam fuga error commodi
-                architecto, laudantium culpa tenetur at id, beatae placeat
-                deserunt iure quas voluptas fugit eveniet.
+                architecto, laudantium culpa tenetur at id.
               </div>
             </div>
             <div class="accordion__item">
@@ -246,20 +237,26 @@
         </div>
       </div>
     </section>
-    <section class="team">
-      <div class="team__heading">
+    <section class="template">
+      <div class="template__heading section-heading">
+        <h3 class="template__heading-main">
+          Amazing Template.
+        </h3>
+      </div>
+    </section>
+    <section class="team" id="team">
+      <div class="team__heading section-heading">
         <h4 class="team__heading-main">Our Team</h4>
         <p class="team__heading-sub">
           Lorem ipsum dolor sit amet laudantium molestias simiut laboriosam.
         </p>
       </div>
       <div class="team-members">
-        <figure class="team-member">
-          <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <figcaption class="team-member__about">
-            <p class="team-member__name">John Doe</p>
-            <p class="team-member__position">Genereal Manager</p>
-          </figcaption>
+        <div class="team-member">
+          <img src="./img/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg" alt="Person"
+            class="team-member__photo" />
+          <p class="team-member__name">John Doe</p>
+          <p class="team-member__position">General Manager</p>
           <div class="team-member__links">
             <a href="#" class="team-member__link team-member__link--twitter">
               <svg class="team-member__icon">
@@ -272,13 +269,11 @@
               </svg>
             </a>
           </div>
-        </figure>
-        <figure class="team-member">
-          <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <figcaption class="team-member__about">
-            <p class="team-member__name">John Doe</p>
-            <p class="team-member__position">Genereal Manager</p>
-          </figcaption>
+        </div>
+        <div class="team-member">
+          <img src="./img/hannah-nicollet-JQ2D4I-2eyw-unsplash.jpg" alt="Person" class="team-member__photo" />
+          <p class="team-member__name">Mike Wilson</p>
+          <p class="team-member__position">UI/UX Designer</p>
           <div class="team-member__links">
             <a href="#" class="team-member__link team-member__link--twitter">
               <svg class="team-member__icon">
@@ -291,13 +286,11 @@
               </svg>
             </a>
           </div>
-        </figure>
-        <figure class="team-member">
-          <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <figcaption class="team-member__about">
-            <p class="team-member__name">John Doe</p>
-            <p class="team-member__position">Genereal Manager</p>
-          </figcaption>
+        </div>
+        <div class="team-member">
+          <img src="./img/linkedin-sales-navigator-pAtA8xe_iVM-unsplash.jpg" alt="Person" class="team-member__photo" />
+          <p class="team-member__name">Vintel Mills</p>
+          <p class="team-member__position">Project Manager</p>
           <div class="team-member__links">
             <a href="#" class="team-member__link team-member__link--twitter">
               <svg class="team-member__icon">
@@ -310,13 +303,11 @@
               </svg>
             </a>
           </div>
-        </figure>
-        <figure class="team-member">
-          <img src="./img/team1.jpg" alt="" class="team-member__photo" />
-          <figcaption class="team-member__about">
-            <p class="team-member__name">John Doe</p>
-            <p class="team-member__position">Genereal Manager</p>
-          </figcaption>
+        </div>
+        <div class="team-member">
+          <img src="./img/shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="Person" class="team-member__photo" />
+          <p class="team-member__name">James Resll</p>
+          <p class="team-member__position">Software Developer</p>
           <div class="team-member__links">
             <a href="#" class="team-member__link team-member__link--twitter">
               <svg class="team-member__icon">
@@ -329,15 +320,17 @@
               </svg>
             </a>
           </div>
-        </figure>
+        </div>
       </div>
     </section>
     <section class="portfolio" id="portfolio">
-      <h3 class="portfolio__heading">Portfolio</h3>
-      <p class="portfolio__about">
-        Lorem ipsum dolor sit amet laudantium molestias simi Quisquam
-        incidunt.
-      </p>
+      <div class="portfolio__heading section-heading">
+        <h3 class="portfolio__heading-main">Portfolio</h3>
+        <p class="portfolio__about-sub">
+          Lorem ipsum dolor sit amet laudantium molestias simi Quisquam
+          incidunt.
+        </p>
+      </div>
       <input type="radio" class="portfolio__select" id="all" name="button" checked />
       <label for="all" class="portfolio__label">all</label>
       <input type="radio" class="portfolio__select" id="web" name="button" />
@@ -347,10 +340,10 @@
       <input type="radio" class="portfolio__select" id="mobile" name="button" />
       <label for="mobile" class="portfolio__label">mobile apps</label>
       <ul class="portfolio__list">
-        <li class="portfolio__item" category="web">
+        <li class="portfolio__item" data-category="web">
           <a href="#img1" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+              <img src="./img/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg" alt="Project illustration"
                 class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
@@ -369,7 +362,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+                <img src="./img/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg" alt="Project illustration"
                   class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
@@ -384,11 +377,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="web">
+        <li class="portfolio__item" data-category="web">
           <a href="#img2" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                class="portfolio__img" />
+              <img src="./img/andrew-neel-cckf4TsHAuw-unsplash.jpg" alt="Project illustration" class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
               </figcaption>
@@ -406,8 +398,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                  class="modal__img" />
+                <img src="./img/andrew-neel-cckf4TsHAuw-unsplash.jpg" alt="Project illustration" class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
                   <p class="modal__text">
@@ -421,10 +412,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="app">
+        <li class="portfolio__item" data-category="app">
           <a href="#img3" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+              <img src="./img/annie-spratt-FSFfEQkd1sc-unsplash.jpg" alt="Project illustration"
                 class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
@@ -443,8 +434,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                  class="modal__img" />
+                <img src="./img/annie-spratt-FSFfEQkd1sc-unsplash.jpg" alt="Project illustration" class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
                   <p class="modal__text">
@@ -458,11 +448,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="mobile">
+        <li class="portfolio__item" data-category="mobile">
           <a href="#img4" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                class="portfolio__img" />
+              <img src="./img/dose-media-bU6JyhSI6zo-unsplash.jpg" alt="Project illustration" class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
               </figcaption>
@@ -480,8 +469,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                  class="modal__img" />
+                <img src="./img/dose-media-bU6JyhSI6zo-unsplash.jpg" alt="Project illustration" class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
                   <p class="modal__text">
@@ -495,10 +483,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="web">
+        <li class="portfolio__item" data-category="web">
           <a href="#img5" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+              <img src="./img/jo-szczepanska-5aiRb5f464A-unsplash.jpg" alt="Project illustration"
                 class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
@@ -517,7 +505,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+                <img src="./img/jo-szczepanska-5aiRb5f464A-unsplash.jpg" alt="Project illustration"
                   class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
@@ -532,10 +520,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="app">
+        <li class="portfolio__item" data-category="app">
           <a href="#img6" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+              <img src="./img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Project illustration"
                 class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
@@ -554,8 +542,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                  class="modal__img" />
+                <img src="./img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Project illustration" class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
                   <p class="modal__text">
@@ -569,11 +556,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="mobile">
+        <li class="portfolio__item" data-category="mobile">
           <a href="#img7" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                class="portfolio__img" />
+              <img src="./img/stanley-dai-73OZYNjVoNI-unsplash.jpg" alt="Project illustration" class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
               </figcaption>
@@ -591,8 +577,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                  class="modal__img" />
+                <img src="./img/stanley-dai-73OZYNjVoNI-unsplash.jpg" alt="Project illustration" class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
                   <p class="modal__text">
@@ -606,10 +591,10 @@
             </div>
           </div>
         </li>
-        <li class="portfolio__item" category="app">
+        <li class="portfolio__item" data-category="app">
           <a href="#img8" class="portfolio__link">
             <figure class="portfolio__figure">
-              <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
+              <img src="./img/tyler-franta-iusJ25iYu1c-unsplash.jpg" alt="Project illustration"
                 class="portfolio__img" />
               <figcaption class="portfolio__caption">
                 Project title
@@ -628,8 +613,7 @@
                 <a href="#portfolio" class="modal__close">&times;</a>
               </header>
               <figure class="modal__figure">
-                <img src="./img/man-using-stylus-pen-for-touching-the-digital-tablet-screen-6335.jpg" alt=""
-                  class="modal__img" />
+                <img src="./img/tyler-franta-iusJ25iYu1c-unsplash.jpg" alt="Project illustration" class="modal__img" />
                 <figcaption class="modal__caption">
                   <p class="modal__description">Project Description</p>
                   <p class="modal__text">
@@ -645,8 +629,8 @@
         </li>
       </ul>
     </section>
-    <section class="prices">
-      <div class="prices__heading">
+    <section class="prices" id="price">
+      <div class="prices__heading section-heading">
         <h4 class="prices__heading-main">Our Prices</h4>
         <p class="prices__heading-sub">
           Lorem ipsum dolor sit amet laudantium incidunt ut laboriosam.
@@ -666,51 +650,51 @@
           <button class="btn btn--main">Sign up now!</button>
         </li>
         <li class="price">
-          <h5 class="price__heading">Basic</h5>
-          <span class="price__amount">$9/m.</span>
+          <h5 class="price__heading">Plus</h5>
+          <span class="price__amount">$19/m.</span>
           <ul class="price__options">
-            <li class="price__option">5 projects</li>
-            <li class="price__option">5 GB of Storage</li>
-            <li class="price__option">Up to 100 Users</li>
-            <li class="price__option">10 GB Bandwidth</li>
+            <li class="price__option">10 projects</li>
+            <li class="price__option">10 GB of Storage</li>
+            <li class="price__option">Up to 250 Users</li>
+            <li class="price__option">25 GB Bandwidth</li>
             <li class="price__option">Security Suite</li>
           </ul>
           <button class="btn btn--main">Sign up now!</button>
         </li>
         <li class="price">
-          <h5 class="price__heading">Basic</h5>
-          <span class="price__amount">$9/m.</span>
+          <h5 class="price__heading">Premium</h5>
+          <span class="price__amount">$29/m.</span>
           <ul class="price__options">
-            <li class="price__option">5 projects</li>
-            <li class="price__option">5 GB of Storage</li>
-            <li class="price__option">Up to 100 Users</li>
-            <li class="price__option">10 GB Bandwidth</li>
+            <li class="price__option">Unlimited</li>
+            <li class="price__option">50 GB of Storage</li>
+            <li class="price__option">Up to 1000 Users</li>
+            <li class="price__option">100 GB Bandwidth</li>
             <li class="price__option">Security Suite</li>
           </ul>
           <button class="btn btn--main">Sign up now!</button>
         </li>
         <li class="price">
-          <h5 class="price__heading">Basic</h5>
-          <span class="price__amount">$9/m.</span>
+          <h5 class="price__heading">Ultimate</h5>
+          <span class="price__amount">$49/m.</span>
           <ul class="price__options">
-            <li class="price__option">5 projects</li>
-            <li class="price__option">5 GB of Storage</li>
-            <li class="price__option">Up to 100 Users</li>
-            <li class="price__option">10 GB Bandwidth</li>
+            <li class="price__option">Unlimited</li>
+            <li class="price__option">150 GB of Storage</li>
+            <li class="price__option">Unlimited</li>
+            <li class="price__option">500 GB Bandwidth</li>
             <li class="price__option">Security Suite</li>
           </ul>
           <button class="btn btn--main">Sign up now!</button>
         </li>
       </ul>
     </section>
-    <section class="contact">
-      <h4 class="contact__heading">
-        Contact Us
-      </h4>
+    <section class="contact" id="contact">
+      <div class="contact__heading section-heading">
+        <h4 class="contact__heading-main">Contact Us</h4>
+      </div>
       <div class="contact-content">
         <form class="contact-form">
           <div class="contact-form__input-container">
-            <input type="name" class="contact-form__input" placeholder="Name" required />
+            <input type="text" class="contact-form__input" placeholder="Name" required />
             <svg class="contact-form__icon">
               <use xlink:href="img/sprite.svg#icon-user" />
             </svg>
@@ -722,7 +706,7 @@
             </svg>
           </div>
           <div class="contact-form__input-container">
-            <textarea class="contact-form__textarea" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <textarea class="contact-form__textarea" cols="30" rows="10" placeholder="Message"></textarea>
             <svg class="contact-form__icon">
               <use xlink:href="img/sprite.svg#icon-edit" />
             </svg>
@@ -808,6 +792,7 @@
       </a>
     </p>
   </footer>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

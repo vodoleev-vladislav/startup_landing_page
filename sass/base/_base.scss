@@ -22,8 +22,8 @@
   --font-size-smallest: 1.5rem;
 }
 
-$bp-largest: 75em; // 1200px
-$bp-large: 62.5em; // 1000px
+$bp-largest: 80em; // 1200px
+$bp-large: 65em; // 1040px
 $bp-medium: 48em; // 768px;
 $bp-small: 37.5em; // 600px;
 
@@ -39,9 +39,13 @@ html {
   box-sizing: border-box;
   font-size: 50%; // 10px/16px = 62.5% -> 1rem = 10px
 
-  @media only screen and (min-width: $bp-medium) {
+  @media only screen and (min-width: $bp-small) {
     font-size: 62.5%;
   }
+}
+
+a:focus {
+  outline: none;
 }
 
 ::selection {
