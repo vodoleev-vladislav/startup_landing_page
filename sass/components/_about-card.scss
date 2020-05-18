@@ -2,6 +2,9 @@
   flex-basis: 100%;
   // margin: 2rem;
   font-size: var(--font-size-small);
+  & > * {
+    margin-bottom: 1rem;
+  }
   &__img {
     width: 100%;
     height: auto;
@@ -9,7 +12,7 @@
 
   &__paragraph,
   &__heading-secondary {
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
   }
 
   &__list {

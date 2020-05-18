@@ -45,6 +45,29 @@
   justify-content: space-evenly;
 }
 
+.motto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  margin: 0 25vw;
+  justify-content: space-evenly;
+  color: var(--color-white);
+
+  &__addressee {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: var(--font-size-large);
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    font-size: var(--font-size-medium);
+  }
+}
+
 .welcome {
   // padding: 2rem;
   text-align: center;
@@ -77,7 +100,8 @@
 .about {
   &__heading {
     text-align: center;
-    margin: 0 5vw;
+    margin-bottom: 2rem;
+    // margin: 0 5vw;
 
     &-main {
       font-size: var(--font-size-medium-large);
@@ -98,6 +122,7 @@
 .team {
   &__heading {
     text-align: center;
+    margin-bottom: 2rem;
     // margin: 0 5vw;
 
     &-main {
@@ -105,7 +130,7 @@
     }
 
     &-sub {
-      font-size: var(--font-size-medium);
+      font-size: var(--font-size-medium-small);
     }
   }
 
@@ -125,10 +150,14 @@
 
   &__heading {
     text-align: center;
-    font-size: var(--font-size-medium);
+
+    &-main {
+      text-align: center;
+      font-size: var(--font-size-medium);
+    }
 
     &-sub {
-      text-align: center;
+      font-size: var(--font-size-medium-small);
     }
   }
 }
