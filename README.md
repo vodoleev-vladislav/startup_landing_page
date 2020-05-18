@@ -1,3 +1,5 @@
 # startup_landing_page
 
-work in progress
+A simple landing page. 
+
+View [live](https://vodoleev-vladislav.github.io/startup_landing_page/index.html)
