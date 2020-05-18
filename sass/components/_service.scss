@@ -9,6 +9,9 @@
   @media only screen and (min-width: $bp-medium) {
     flex-basis: 50%;
   }
+  @media only screen and (min-width: $bp-largest) {
+    flex-basis: 33%;
+  }
 
   &__icon {
     height: 3rem;
